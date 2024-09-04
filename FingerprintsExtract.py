@@ -61,7 +61,7 @@ def extractLocalFingerprints(datas):
     if len(datas) == 1:
         return [list()]
     res = list()
-    data_segs = [extractFlowSegsByLocalDir(item[0], item[1]) for item in datas]  # 将数据按照段划分，节省后续时间
+    data_segs = [extractFlowSegsByLocalDir(item[0], item[1]) for item in datas] 
     caches = dict()
     for c_index, c_seg in enumerate(data_segs):
         c_datalen = len(c_seg)
@@ -128,7 +128,7 @@ def judgeCommonList(data, data_p):
     return res, res_num
 
 
-most_count = 20  # 防止太多，匹配结果慢
+most_count = 20  
 
 
 def extractPacketFingerprints(datas):
@@ -140,7 +140,7 @@ def extractPacketFingerprints(datas):
         })
         return res
 
-    data_dirs = [extractFlowByDir(item[0], item[1]) for item in datas]  # 将数据按照前后方向划分
+    data_dirs = [extractFlowByDir(item[0], item[1]) for item in datas]  
     cache = dict()
     for c_index, c_data in enumerate(data_dirs):
         c_res = {
