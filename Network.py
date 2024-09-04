@@ -163,7 +163,7 @@ class ActorCritic(nn.Module):
             return actor.cpu().numpy()
 
 
-# -----------------数据相关--------------------
+
 class ReplayBuffer:
     def __init__(self, state_dim, size):
         self.state_buf = np.zeros((size, stateSize, state_dim), dtype=np.float32)
