@@ -119,7 +119,7 @@ def printServices(services):
         print("------------------------------------")
         print(port)
         for dstip, dstipdata in datas.items():
-            print("【", dstip, "】")
+            print("[", dstip, "]")
             for flowdata in dstipdata:
                 print(". .. .. .. .. .. .. . .")
                 for flowid, flow in flowdata.items():
